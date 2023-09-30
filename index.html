@@ -7,6 +7,15 @@
     <meta name="discription" lang="ru" content="Все антивирусы в одном месте. Защитите вашу семью от вирусов, вредоносных программ, программ-вымогателей, троянов и других угроз.">
     <meta name="author" content="Кузьмин Иван">
     <meta name="robots" content="index, follow">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        h1 {
+            font-size: 200%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: blueviolet;
+            text-align: center;
+        }
+    </style>
     <title>Главная</title>
 </head>
 <body>
@@ -27,7 +36,7 @@
         <hr>
         <p>
             <blockquote>
-                <q>
+                <q style="font-family: Times, serif; font-size: 18px; font-style: italic; color:#008">
                     Большинство вредоносных программ (malware) объединяет все программы, создаваемые и используемые для осуществления несанкционированных и зачастую драматических воздействий на мирного пользователя. Вирусы, backdoor-программы (создаваемые для незаконного удаленного администрирования), клавиатурные шпионы, программы для кражи паролей и другие типы троянцев, макровирусы для Word и Excel, вирусы сектора загрузки, скриптовые вирусы (BAT-вирусы, windows shell-вирусы, java-вирусы и т.д.) и скриптовые троянцы, мошенническое ПО, шпионские и рекламные программы – это далеко не полный список того, что классифицируется как вредоносные программы.
                 </q>
                 <p><cite>Принцип Касперского. Телохранитель Интернета.(авторы: Владислав Дорофеев, Татьяна Костылева)</cite></p>
@@ -84,52 +93,60 @@
             </li>
         </ul>
         <p>Можно привести классификацию вирусов по некоторым признакам.</p>
-        <table width="500px" border="1" cellpadding="5" cellspacing="0">
-            <caption>Классификация вирусов</caption>
-            <col width="200" valign="top">
-            <col width="150" valign="top">
-            <col width="150" valign="top">
-            <colgroup>
-                <thead>
-                    <tr>
-                        <th>По способу заражения среды обитания</th>
-                        <th>По среде обитания</th>
-                        <th>По особенностям алгоритма</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                     <tr>
-                        <td rowspan="3">Резидентные</td>
-                        <td>Файловые</td>
-                        <td>Паразитические</td>
-                    </tr>
-                    <tr>
-                        <td>Загрузочные</td>
-                        <td>Репликаторы</td>
-                    </tr>
-                    <tr>
-                        <td>Файлово-загрузочные</td>
-                        <td>Невидимки</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="3">Нерезидентные</td>
-                        <td>Драйверные</td>
-                        <td>Мутанты</td>
-                    </tr>
-                    <tr>
-                        <td>Макровирусы</td>
-                        <td>Троянские</td>
-                    </tr>
-                    <tr>
-                        <td>Сетевые</td>
-                        <td></td>
-                    </tr>
+        <div class="scroll-table">
+            <table width="500px" border="2" cellpadding="5" cellspacing="0">
+                <caption>Классификация вирусов</caption>
+                <col width="200" valign="top">
+                <col width="150" valign="top">
+                <col width="150" valign="top">
+                <colgroup>
+                    <thead class="borderClass">
+                        <tr>
+                            <th>По способу заражения среды обитания</th>
+                            <th>По среде обитания</th>
+                            <th>По особенностям алгоритма</th>
+                        </tr>
+                    </thead>
+                </colgroup>
+            </table>
+        </div>
+        <div class="scroll-table-body">
+            <table width="500px" border="2" cellpadding="5" cellspacing="0">
+                <col width="200" valign="top">
+                <col width="150" valign="top">
+                <col width="150" valign="top">
+                <colgroup>
+                    <tbody class="borderClass">
+                        <tr>
+                            <td rowspan="3">Резидентные</td>
+                            <td>Файловые</td>
+                            <td>Паразитические</td>
+                        </tr>
+                        <tr>
+                            <td>Загрузочные</td>
+                            <td>Репликаторы</td>
+                        </tr>
+                        <tr>
+                            <td>Файлово-загрузочные</td>
+                            <td>Невидимки</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Нерезидентные</td>
+                            <td>Драйверные</td>
+                            <td>Мутанты</td>
+                        </tr>
+                        <tr>
+                            <td>Макровирусы</td>
+                            <td>Троянские</td>
+                        </tr>
+                        <tr>
+                            <td>Сетевые</td>
+                            <td><img src="image/virus.jpg" alt="" width="100%"></td>
+                        </tr>
                 </tbody>
-            </colgroup>
-        </table>
-        <p>пусть будут инфа</p>
-    </div>  
+                </colgroup>              
+            </table>  
+        </div>  
     <hr>  
     <div class="footer">
         <address>Санкт-Петербург</address>
