@@ -15,6 +15,11 @@
             color: blueviolet;
             text-align: center;
         }
+        .footer {
+            font-size: 18px;
+            color:#70565c;
+            padding-left: 59px;
+        }
     </style>
     <title>Главная</title>
 </head>
@@ -22,7 +27,7 @@
     <div class="head">
     <center>
         <!-- Осуждается! Использую, для лабы т.к. в HTML 4 тег использовался.-->
-        <img src="image/logo.png" width="70px">
+        <img src="image/logo.png" width="100px" class="logo">
         <h1>Антивирусные программы</h1>
         <div class="nav">
             <a href="index.html">Главная</a> | 
@@ -39,7 +44,7 @@
                 <q style="font-family: Times, serif; font-size: 18px; font-style: italic; color:#008">
                     Большинство вредоносных программ (malware) объединяет все программы, создаваемые и используемые для осуществления несанкционированных и зачастую драматических воздействий на мирного пользователя. Вирусы, backdoor-программы (создаваемые для незаконного удаленного администрирования), клавиатурные шпионы, программы для кражи паролей и другие типы троянцев, макровирусы для Word и Excel, вирусы сектора загрузки, скриптовые вирусы (BAT-вирусы, windows shell-вирусы, java-вирусы и т.д.) и скриптовые троянцы, мошенническое ПО, шпионские и рекламные программы – это далеко не полный список того, что классифицируется как вредоносные программы.
                 </q>
-                <p><cite>Принцип Касперского. Телохранитель Интернета.(авторы: Владислав Дорофеев, Татьяна Костылева)</cite></p>
+                <p><cite id="book">Принцип Касперского. Телохранитель Интернета.(авторы: Владислав Дорофеев, Татьяна Костылева)</cite></p>
             </blockquote>
         </p>
         <h3>Откуда появляются вредоносные программы на компьютере</h3>
@@ -141,14 +146,14 @@
                         </tr>
                         <tr>
                             <td>Сетевые</td>
-                            <td><img src="image/virus.jpg" alt="" width="100%"></td>
+                            <td><img src="image/virus.jpg" alt="" width="100%" class="imgTable"></td>
                         </tr>
                 </tbody>
                 </colgroup>              
             </table>  
         </div>  
     <hr>  
-    <div class="footer">
+    <div class="footer" style="font-size: 12px; color: #000; padding-left: 0;">
         <address>Санкт-Петербург</address>
     </div>
 </body>
