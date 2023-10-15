@@ -35,7 +35,7 @@
     text-decoration: underline;
 }
 
-.list a:link {
+.list + a:link {
     color: rgb(36, 8, 8);
 }
 .list a:visited {
@@ -61,7 +61,11 @@
 }
 .scroll-table {
 	table-layout: fixed;
-	border: none;
+	border: 2mm;
+}
+
+.borderClass {
+    text-align: center;
 }
 
 ::-webkit-scrollbar {
@@ -83,6 +87,3 @@
     font-weight: bolder;
     padding-left: 10px;
 }
-[class$="Table"] {
-    background-color: rgb(241, 241, 33);
-  }
