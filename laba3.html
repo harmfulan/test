@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Кузьмин Иван">
+    <link href="style.css" rel="stylesheet">
+    <title>Редактор JavaScript</title>
+</head>
+<body>
+    <div class="head">
+        <img src="image/logo.png" width="100px" class="logo">
+        <h1>Лабораторая работа №3</h1>
+        <div class="nav">
+            <a href="index.html">Главная</a>
+            <a href="basis.html">Общая информация об антивирусных программах</a>
+            <a href="book.html">Использованные источники</a>
+            <a href="laba3.html">Laba 3</a>
+        </div>
+    </div>
+    <div class="main">
+        <br>
+        <hr>
+        Введите скрипт:<br/>
+        <textarea id="mycode" rows=10 cols=40></textarea>
+        <br/>Результат:<br/>
+        <textarea id="myrezult" rows=3 cols=40></textarea> <br/>
+        <button onclick= "document.getElementById('myrezult').value = eval(document.getElementById('mycode').value)">
+        Выполнить
+        </button>
+        <button onclick="document.getElementById('mycode').value='';
+        document.getElementById('myrezult').value=''"> Очистить</button>
+    </div>
+
+    <hr>
+    <div class="footer" style=" position: absolute; top: 550px;">
+        <address>Санкт-Петербург</address>
+    </div>
+</body>
+</html>
