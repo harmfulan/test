@@ -3,6 +3,20 @@
     font-size: 14px;
     color: rgb(25, 25, 75);
 }
+#mycode {
+width: 1688px;
+height: 252px;
+}
+
+#mycode2 {
+width: 1279px;
+}
+
+#myrezult{
+width: 1688px;
+height: 134px;
+}
+
 .head {
     text-align: center;
 }

@@ -6,6 +6,17 @@
     <meta name="author" content="Кузьмин Иван">
     <link href="style.css" rel="stylesheet">
     <title>Редактор JavaScript</title>
+    <style>
+    canvas {     border: 1px dashed black; }
+    </style>
+
+    <script>
+    function clear_holst()
+    { var canvas = document.getElementById("drawingCanvas");
+      var context = canvas.getContext("2d");
+      context.clearRect(0,0,600,200);  }
+    </script>
+
 </head>
 <body>
     <div class="head">
@@ -21,6 +32,7 @@
     <div class="main">
         <br>
         <hr>
+         <h2>Основное задание </h2>
         Введите скрипт:<br/>
         <textarea id="mycode" rows=10 cols=40></textarea>
         <br/>Результат:<br/>
@@ -33,8 +45,30 @@
     </div>
 
     <hr>
-    <div class="footer" style=" position: absolute; top: 550px;">
+
+    <h2>Расширенное задание </h2>
+
+
+    <table border =0>
+        <tr>
+            <td> Введите  текст программы на javascript:</td>
+            <td>Отображение рисунка: </td>
+        </tr>
+        <tr>
+            <td><textarea id="mycode2" rows=20 cols=100></textarea>
+            </td>
+            <td>
+                <canvas id="drawingCanvas" width="400" height="300">Ваш браузер не поддерживает canvas </canvas>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <button onclick= "eval(document.getElementById('mycode2').value)">Отобразить рисунок </button>
+
+    <div class="footer" style=" position: absolute; top: 1300px;">
         <address>Санкт-Петербург</address>
     </div>
+
 </body>
 </html>
