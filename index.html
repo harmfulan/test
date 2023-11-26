@@ -8,6 +8,33 @@
     <meta name="author" content="Кузьмин Иван">
     <meta name="robots" content="index, follow">
     <link href="style.css" rel="stylesheet">
+    <script type="text/javascript">
+              var watch = function(second=false) {
+              var clock = document.getElementById('clock');
+              var date = new Date();
+              var hours = date.getHours();
+              if (hours < 10) hours = '0' + hours;
+              clock.children[0].innerHTML = hours;
+              var minutes = date.getMinutes();
+              if (minutes < 10) minutes = '0' + minutes;
+              clock.children[1].innerHTML = ":" + minutes;
+              var seconds = date.getSeconds();
+              if (seconds < 10) seconds = '0' + seconds;
+              clock.children[2].innerHTML = ":" + seconds;
+            }
+
+            setInterval(watch, 1000);
+
+            function hide_second(){
+                    document.getElementById('ss').hidden = true;
+                    }
+            function show_second(){
+                    document.getElementById('ss').hidden = false;
+                    }
+    </script>
+
+
+
     <style>
         h1 {
             font-size: 200%;
@@ -151,10 +178,18 @@
                 </tbody>
                 </colgroup>              
             </table>  
-        </div>  
-    <hr>  
-    <div class="footer" style="font-size: 12px; color: #000; padding-left: 0;">
-        <address>Санкт-Петербург</address>
+        </div>
+
+        <div id="clock">
+            <span id="hh">hh</span><span id="mm">mm</span><span id="ss">ss</span>
+            <br>
+            <button onclick = "hide_second()"> я спрячу секунды</button>
+            <button onclick = "show_second()"> я покажу секунды</button>
+        </div>
+        <hr>
+        <div class="footer" style="font-size: 12px; color: #000; padding-left: 0;">
+            <address>Санкт-Петербург</address>
+        </div>
     </div>
 </body>
 </html>
