@@ -108,3 +108,16 @@ height: 134px;
 #ss{
     visibility: visible;
 }
+
+ #clock{
+    margin:0px auto;
+    width: 500px;
+    background-color: #FFFFFF;
+    color: #253146;
+        padding-top: 30px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:80px;
+    text-align: center;
+    letter-spacing: 2px;
+
+}
