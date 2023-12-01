@@ -121,3 +121,55 @@ height: 134px;
     letter-spacing: 2px;
 
 }
+
+#button_clock{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: #008CBA;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#button_clock:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.ButtonForm{
+    border: 1px solid green;
+    background-color: #008CBA;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    padding: 15px 32px;
+
+}
+
+.ButtonForm:hover {
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+input[type=text] {
+    width: 500px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    outline: none;
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+}
+
+#footer_button{
+float: right;
+}

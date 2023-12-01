@@ -8,6 +8,7 @@
     <meta name="author" content="Кузьмин Иван">
     <meta name="robots" content="index, follow">
     <link href="style.css" rel="stylesheet">
+    <script  type = "text/javascript"  src="laba4.js"> </script>
     <script type="text/javascript">
               var watch = function(second=false) {
               var clock = document.getElementById('clock');
@@ -25,14 +26,18 @@
 
             setInterval(watch, 1000);
 
-            function hide_second(){
+            hide_second = function (){
                     document.getElementById('ss').hidden = true;
                     }
-            function show_second(){
+            show_second = function (){
                     document.getElementById('ss').hidden = false;
                     }
-    </script>
+            function getNameAuthor (){
+                alert("Кузьмин Иван Александрович Z0431");
+            }
+        window.onload = getNameAuthor()
 
+    </script>
 
 
     <style>
@@ -64,7 +69,7 @@
         </div>
     </center>
     </div>
-    <div class="main">
+    <div class="main" onload="getNameAuthor()">
         <h2>Безопасная работа в сети Интернет</h2>
         <hr>
         <p>
@@ -148,7 +153,7 @@
                 <col width="150" valign="top">
                 <col width="150" valign="top">
                 <colgroup>
-                    <tbody class="borderClass">
+                    <tbody class="borderClass" >
                         <tr>
                             <td rowspan="3">Резидентные</td>
                             <td>Файловые</td>
@@ -177,18 +182,43 @@
                         </tr>
                 </tbody>
                 </colgroup>              
-            </table>  
+            </table>
         </div>
+        <div class="FormConteiner">
+            <div class="addRowForm">
+                <div >
+                    <label for="infection">Cпособ заражения:</label><br>
+                    <input type="text" name="infection" id="infection"/>
+                </div>
+                <div>
+                    <label for="habitat">Среда обитания:</label><br>
+                    <input type="text" name="habitat" id="habitat"/>
+                </div>
+                <div>
+                    <label for="algorithm">Особенность алгоритма:</label><br>
+                    <input type="text" name="algorithm" id="algorithm"/>
+                </div>
+                <div class="buttonRow">
+                    <button class="ButtonForm"  onclick = "addRow()"> Добавить</button>
+                    <button class="ButtonForm" onclick="eraseRow()">Удалить строку</button>
+                    <button class="ButtonForm" onclick="eraseRowAll()">Удалить всё</button>
+                </div>
+            </div>
+        </div>
+
 
         <div id="clock">
             <span id="hh">hh</span><span id="mm">mm</span><span id="ss">ss</span>
             <br>
-            <button onclick = "hide_second()"> я спрячу секунды</button>
-            <button onclick = "show_second()"> я покажу секунды</button>
+            <button id="button_clock" onclick = "hide_second()"> я спрячу секунды</button>
+            <button id="button_clock" onclick = "show_second()"> я покажу секунды</button>
         </div>
         <hr>
+<!--        <div class="footer" onclick="getNameAuthor()" style="font-size: 12px; color: #000; padding-left: 0;">-->
         <div class="footer" style="font-size: 12px; color: #000; padding-left: 0;">
+
             <address>Санкт-Петербург</address>
+            <button class="ButtonForm" id="footer_button" onclick="addEvents('button', '#e61809', 70, 350)">Сделать красиво</button>
         </div>
     </div>
 </body>
