@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" >
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="icon" type="image/gif" href="favicon/favicon.ico">
+    <script  type = "text/javascript"  src="laba5.js"> </script>
+    <script type="text/javascript">
+            function getDate()
+            {
+                var date = new Date();
+                var hours = date.getHours();
+                var minutes = date.getMinutes();
+                var seconds = date.getSeconds();
+                if (hours < 10) hours = '0' + hours;
+                if (minutes < 10) minutes = '0' + minutes;
+                if (seconds < 10) seconds = '0' + seconds;
+                document.getElementById('timedisplay').value = hours + ':' + minutes + ':' + seconds;
+            }
+            setInterval(getDate, 0);
+</script>
+    <style>
+        h1 {
+            font-size: 200%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: blueviolet;
+            text-align: center;
+        }
+        .footer {
+            font-size: 18px;
+            color:#70565c;
+            padding-left: 59px;
+
+        }
+        h2,h3,h4 {
+            padding-top: 50px;
+            text-align: center;
+        }
+
+        .survey{
+            width: 500px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #555;
+            outline: none;
+        }
+        .survey:focus{
+            background-color: lightblue;
+        }
+        th {
+        float : right;
+        padding-top: 20px;
+        }
+
+        .radio {
+        padding-top: 20px;
+
+        }
+        .checkbox{
+        padding-top: 20px;
+        }
+        .group {
+            width: 500px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #555;
+            outline: none;
+        }
+
+        .group:focus {
+            background-color: lightblue;
+            }
+        .FormTable{
+        margin: auto;
+        width: 1100px;
+        }
+        .send {
+             margin-left: 46%;
+             padding-top: 2%;
+            }
+        .FormTable{
+            border-radius: 10% / 50%;
+            background: #20B2AA;
+        }
+
+
+    </style>
+    <title>Опрос</title>
+</head>
+<body>
+    <div class="head">
+        <img src="image/logo.png" width="100px" class="logo">
+        <h1>Антивирусные программы</h1>
+        <div class="nav">
+            <a href="index.html">Главная</a>
+            <a href="basis.html">Общая информация об антивирусных программах</a>
+            <a href="book.html">Использованные источники</a>
+            <a href="laba3.html">Laba 3</a>
+            <a href="http://127.0.0.1:8080/form.html">Анкета (Laba 4)</a>
+
+        </div>
+    </div>
+    <div class="main">
+        <h2>Анкета</h2>
+        <hr>
+        <h3>Опрос по теме</h3>
+            <div class="FormConteiners">
+                        <form method="GET" action="http://127.0.0.1:8080/cgi-bin/tutor5.py" onsubmit = "return formValidation(this);">
+                            <h4>Заполните форму и нажмите кнопку:"Отправить"</h4>
+                           <table class="FormTable">
+                                <tr>
+                                   <th>Фамилия:</th>
+                                   <td><input class="survey" name="surname" required pattern="^[А-Яа-яЁё\s]+$"></td>
+                                </tr>
+                                <tr>
+                                   <th>Имя:</th>
+                                   <td><input class="survey" name="name" required pattern="^[А-Яа-яЁё\s]+$"></td>
+                                </tr>
+                                <tr>
+                                   <th>Отчество:</th>
+                                   <td><input class="survey" name="lastname" required pattern="^[А-Яа-яЁё\s]+$"></td>
+                                </tr>
+                                <tr>
+                                    <th>Классификация:</th>
+                                    <td>
+                                        <select class="group" name="group">
+                                            <option value="">Выберите классификацию вирусов</option>
+                                            <option value="Резидентные">Резидентные</option>
+                                            <option value="Нерезидентные">Нерезидентные</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                               <tr>
+                                   <th>Как определить, что компьютер<br>заражен вредоносной программой?</th>
+                                   <td class="radio">
+                                    <input  type="radio"  name="radio" value="Компьютер часто зависает"  class="inputChoiceRadio" >Компьютер часто зависает<br>
+                                    <input  type="radio"  name="radio" value="Компьютер внезапно перезагружается"  class="inputChoiceRadio" >Компьютер внезапно перезагружается<br>
+                                    <input  type="radio"  name="radio" value="Изменяются настройки браузера"  class="inputChoiceRadio" >Изменяются настройки браузера<br>
+                                    <input  type="radio"  name="radio" value="Нет доступа в сеть интернет"  class="inputChoiceRadio" >Нет доступа в сеть интернет<br>
+                                   </td>
+                                </tr>
+                               <tr>
+                                   <th>Методы защиты от вирусов?</th>
+                                   <td class="checkbox">
+                                       <input name="checkbox" type='checkbox' value="Метод сканирования сигнатур" class="inputChoice">Метод сканирования сигнатур<br>
+                                       <input name="checkbox" type='checkbox' value="Метод контроля целостности" class="inputChoice">Метод контроля целостности<br>
+                                       <input name="checkbox" type='checkbox' value="Метод отслеживания поведения программ" class="inputChoice">Метод отслеживания поведения программ<br>
+                                       <input name="checkbox" type='checkbox' value="Метод сканирования подозрительных команд" class="inputChoice">Метод сканирования подозрительных команд<br>
+                                   </td>
+                                </tr> <tr>
+                                   <td>
+                                       <input name="timedisplay" type='hidden' id="timedisplay">
+                                   </td>
+                               </tr>
+
+                               <tr>
+                                   <th>Комментарий:</th>
+                                   <td style="padding-top: 20px">
+                                       <textarea name="comment" cols=70 rows=4 placeholder="введите текст"> </textarea>
+                                   </td>
+                               </tr>
+
+                            </table>
+                            <div class="send">
+                            <button  class="ButtonForm" alt="Отправить">Отправить</button>
+                            </div>
+                        </form>
+                </div>
+        <hr>
+        <div class="footer" style="font-size: 12px; color: #000; padding-left: 0;">
+            <address>Санкт-Петербург</address>
+        </div>
+    </div>
+</body>
+</html>
