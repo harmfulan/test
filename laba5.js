@@ -1,9 +1,4 @@
 
-function getDate() {
-   var elem = document.getElementsByClassName("newdate");
-   return elem.value = String(new Date())
-   }
-
 
 function radio_check(){
 var class_radio =  document.getElementsByClassName("inputChoiceRadio");

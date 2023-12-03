@@ -1,0 +1,46 @@
+version: '3'
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 8080:80
+    depends_on:
+      - mysql
+    restart: always
+    networks:
+      - default
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpmyadmin
+    restart: always
+    environment:
+      - PMA_ARBITRARY=1
+      - UPLOAD_LIMIT=1024M
+      - MEMORY_LIMIT=1024M
+      - MAX_EXECUTION_TIME=300
+    depends_on:
+      - mysql
+    ports:
+      - 8090:80
+    networks:
+      - default
+  mysql:
+    image: mysql:latest
+    container_name: php_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "87654321"
+      MYSQL_DATABASE: phpdatabase
+      MYSQL_USER: user1
+      MYSQL_PASSWORD: "87654321"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: always
+    networks:
+      - default
+volumes:
+  mysql_data:
