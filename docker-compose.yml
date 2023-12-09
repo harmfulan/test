@@ -39,8 +39,12 @@ services:
       MYSQL_PASSWORD: "87654321"
     volumes:
       - mysql_data:/var/lib/mysql
+      - mycustom.cnf:/etc/mysql/conf.d/custom.cnf
     restart: always
+    ports:
+      - 3306:3306
     networks:
       - default
 volumes:
   mysql_data:
+  mycustom.cnf:
