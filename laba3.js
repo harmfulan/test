@@ -21,7 +21,8 @@ let M = getNumbermatrix(messages="Введите строку матрицы с 
 
 function getRandomNumber(min, max) {
       return Math.floor(Math.random() * (max - min) + min)
-  }  
+  }
+
  //Инициализируем матрицу
  for (let i = 0; i < number_matrix; i++) {
  	let temp_array = []
@@ -29,23 +30,24 @@ function getRandomNumber(min, max) {
   		{
   			temp_array.push(getRandomNumber(1, 99))
   		}
+  		temp_array.push('\n')
   	matrix.push(temp_array)
  }
 
-//matrix = [[1,2,3,4,5,6],[1,2,3,4,5,6],[1,2,3,4,5,6],[1,2,3,4,5,6],[1,2,3,4,5,6],[1,2,3,4,5,6]]
+//matrix = [['1','2','3','4','5','6\n'],['1','2','3','4','5','6\n'],['1','2','3','4','5','6\n'],['1','2','3','4','5','6\n'],['1','2','3','4','5','6\n'],['1','2','3','4','5','6\n']]
 
 
 // Создаем временный массив согласно условию задачи  
 for (let n = 0; n < matrix.length; n++)
 {
     console.log(matrix[n])
-	for (let g = 0; g < matrix[n].length; g++)
+	for (let g = 0; g < matrix[n].length-1; g++)
 	{
 
 		if (n == N)
 		{
 	
-			matrix[M][g] = ((matrix[n][g] * Z) + matrix[M][g])
+			matrix[M][g] = (Number(matrix[n][g] * Z) + matrix[M][g])
 		}
 	}
 }
